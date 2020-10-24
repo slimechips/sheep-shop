@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Fill in the title to appear as your tab title below -->
+    <title>Steve's Sheep Shop</title>
+  </head>
+  <body>
+    <!-- Fill in the main header title for your webpage below -->
+    <h1>Welcome to Steve's Sheep Shop!</h1>
+
+    <!-- Fill in the subtitle for your webpage bloew -->
+    <h2>Let us know how much wool you want to buy!</h2>
+
+    <!-- The below code adds a form to our webpage. This form calls our Python file when the button is pressed -->
+    <form id="request_form" action="{{ url_for('request_price') }}" method="POST">
+
+      <!-- Fill in the labels for our form fields below-->
+      <!-- The <input> elements add fields (with an assigned id) for our forms -->
+      <label for="num_red_wool">Number of Red Wool:</label><br>
+      <input type="number" id="num_red_wool" name="num_red_wool"><br> 
+
+      <label for="num_green_wool">Number of Green Wool:</label><br>
+      <input type="number" id="num_green_wool" name="num_green_wool"><br>
+
+      <label for="num_blue_wool">Number of Blue Wool:</label><br>
+      <input type="number" id="num_blue_wool" name="num_blue_wool"><br>
+
+      <!-- The below represents the submit button for our form -->
+      <input type="submit" value="Calculate Price">
+    </form> 
+  </body>
+</html>
