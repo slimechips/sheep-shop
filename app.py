@@ -4,13 +4,13 @@ red_wool_price = 100
 green_wool_price = 10
 blue_wool_price = 1
 
-application = Flask(__name__)
+app = Flask(__name__)
 
-@application.route('/')
+@app.route('/')
 def index():
     return render_template('index.html')
 
-@application.route('/request_price', methods=['POST'])
+@app.route('/request_price', methods=['POST'])
 def request_price():
     num_red_wool = int(request.form.get('num_red_wool'))
     num_green_wool = int(request.form.get('num_green_wool'))
@@ -19,4 +19,4 @@ def request_price():
     return jsonify({ 'price': price })
 
 if __name__ == '__main__':
-    application.run(port=4999)
+    app.run(port=4999)
